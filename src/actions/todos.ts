@@ -31,11 +31,9 @@ export const fetchTodo = () => {
 	};
 };
 
-export const deleteTodo = (id: number) => {
-	return async (dispatch: Dispatch) => {
-		dispatch<DeleteTodoAction>({
-			type: ActionTypes.deleteTodo,
-			payload: id,
-		});
+export const deleteTodo = (id: number): DeleteTodoAction => {
+	return {
+		type: ActionTypes.deleteTodo,
+		payload: id,
 	};
 };
